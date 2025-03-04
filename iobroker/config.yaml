@@ -1,5 +1,5 @@
 name: "iobroker"
-version: "1.0.0"
+version: "v10.0.0"
 slug: "iobroker"
 description: "Add-On für den ioBroker basierend auf buanet/iobroker:v10.0.0"
 arch:
