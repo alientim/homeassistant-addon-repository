@@ -1,0 +1,20 @@
+name: "ioBroker"
+version: "10.0.0"
+slug: "iobroker"
+description: "ioBroker Home Automation"
+arch:
+  - amd64
+  - armv7
+  - aarch64
+startup: "services"
+boot: "auto"
+hassio_api: true
+hassio_role: "homeassistant"
+homeassistant_api: false
+ports:
+  8081/tcp: 8081
+  18883/tcp: 18883
+map:
+  - addon_configs:rw
+options: {}
+schema: {}
