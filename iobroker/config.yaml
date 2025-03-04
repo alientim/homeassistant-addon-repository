@@ -1,0 +1,22 @@
+name: "ioBroker for HA"
+version: "v10.0.0"
+slug: "ha-iobroker"
+description: "ioBroker in einem Home Assistant Add-on"
+url: "https://github.com/alientim/HA-ioBroker"
+arch:
+  - amd64
+  - armv7
+  - aarch64
+startup: "services"
+boot: "auto"
+hassio_api: true
+hassio_role: "admin"
+host_network: false
+map:
+  - addon_configs:rw
+ports:
+  8081/tcp: 8081
+  mqtt_port/tcp: 1883
+ports_description:
+  8081/tcp: "Web-UI von ioBroker"
+  mqtt_port/tcp: "Optionaler MQTT-Port"
