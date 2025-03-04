@@ -3,4 +3,6 @@ WORKDIR /opt/iobroker
 VOLUME ["/addons_config/iobroker"]
 EXPOSE 8081
 EXPOSE 1883
-CMD ["node", "node_modules/iobroker.js-controller/controller.js"]
+COPY run.sh /run.sh
+RUN chmod +ax /run.sh
+CMD ["/run.sh"]
