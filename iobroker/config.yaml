@@ -1,8 +1,8 @@
-name: ioBroker
-version: 10.0.0
-slug: iobroker
+name: custom-at-ioBroker
+version: 1.0.0
+slug: custom-at-ioBroker
 description: Home Assistant Add-on for ioBroker
-url: https://github.com/yourusername/iobroker-addon
+url: https://github.com/alientim/homeassistant-addon-repository/iobroker
 arch:
   - armhf
   - armv7
