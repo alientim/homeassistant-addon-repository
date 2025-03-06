@@ -1,26 +1,21 @@
-name: "iobroker"
-version: "v10.0.0"
-slug: "iobroker"
-description: "Add-On für den ioBroker basierend auf buanet/iobroker:v10.0.0"
+name: ioBroker
+version: 10.0.0
+slug: iobroker
+description: Home Assistant Add-on for ioBroker
+url: https://github.com/yourusername/iobroker-addon
 arch:
-  - amd64
+  - armhf
   - armv7
-  - arm64
-ports:
-  8081/tcp: 8081
-  18883/tcp: 18883
+  - aarch64
+  - amd64
+image: buanet/iobroker-{arch}
 map:
-  config: false
-  ssl: false
-  addons: true  # Aktiviert den Zugriff auf `/addon_configs`
+  - addon_configs:rw
+init: false
+panel_icon: mdi:home-automation
 options:
-  iobroker_folder: "/addon_configs/iobroker"
+  config_path: "/addon_configs/iobroker"
+  log_level: info
 schema:
-  iobroker_folder:
-    description: "Pfad des lokalen Ordners für ioBroker-Daten (standardmäßig /addon_configs/iobroker)"
-    type: string
-    default: "/addon_configs/iobroker"
-startup: "services"
-host_network: false
-privileged: true
-timeout: 60
+  config_path: str
+  log_level: list(info|debug)?
